@@ -16,6 +16,23 @@
         body {
            padding-top: 60px;
         }
+        .linediv-l {
+          border-right: 1px white solid;
+        }
+        .linediv-r {
+          border-left: 1px white solid;
+        }
+      }
+      @media (max-width: 480px) {
+        .copy {
+          padding: 2.5% 10%;
+        }
+        .linediv-l {
+          border-bottom: 1px white solid;
+        }
+        .linediv-r {
+          border-top: 1px white solid;
+        }
       }
 
       /* All Form factors */
@@ -47,12 +64,13 @@
         background-color: #343434;
         padding: 3% 0%;
       }
-      .thermometer, .order, .social, .statistics {
+      .video, .thermometer, .order, .social, .statistics {
         text-align: center
       }
-      div.row {
-      border: 1px solid;
+      .statistics h3, .statistics p {
+        color: white;
       }
+ 
     </style>
   </head>
   <body>
@@ -96,7 +114,31 @@
       	<div class="span5 offset1 video">
       	  <img class="img-polaroid" src="http://placehold.it/480x300"> 
       	</div>
-	<div class="span6">
+
+        <!-- action contains stats order and share -->
+      	<div class="span5 actions">
+          <div class="span8 offset2">
+            <div class="statistics">
+              <div class="span4">
+                <!-- linediv-l and -r give dividing lines -->
+                <div class="linediv-l">
+                  <h3> 100</h3><p>backers</p>
+                </div>
+              </div>
+              <div class="span4">
+                <div class="linediv-c">
+                  <h3>$6000</h3><p>of $10000</p>
+                </div>
+              </div>
+              <div class="span4">
+                <div class="linediv-r">
+                  <h3>10</h3><p> days left</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
 	<div class="thermometer">
 	  Thermometer
 	</div>
