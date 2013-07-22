@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>My First Bitstarter</title>
+    <title>The Ultimate Cooking Appliance</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link type="text/css" rel="stylesheet" href="https://d396qusza40orc.cloudfront.net/startup%2Fcode%2Fbootstrap-combined.no-icons.min.css">
 
@@ -96,7 +96,70 @@
       .footer a {
         color: #ccccff;
       }
+
+
+
+      div.wrapper{  
+        float:left; /* important */  
+        position:relative; /* important(so we can absolutely position the description div */  
+      }  
+      div.description{  
+        position:absolute; /* absolute position (so we can position it where we want)*/  
+        bottom:0px; /* position will be on bottom */  
+        left:0px;  
+        width:100%;  
+        /* styling bellow */  
+        /* background-color:black;  */
+        font-family: 'tahoma';  
+        font-size:15px;  
+        color:white;  
+        opacity:0.6; /* transparency */  
+        filter:alpha(opacity=60); /* IE transparency */  
+      }  
+      p.description_content{  
+        padding:10px;  
+        margin:0px;  
+      }  
+
     </style>
+
+
+<script type="text/javascript">
+jQuery(function()
+{
+
+  jQuery('.nav li a').click(function(e) {
+
+    jQuery('.nav li').removeClass('active');
+    var a = jQuery(this);
+    var li = a.parent();
+    if (!li.hasClass('active')) {
+      li.addClass('active');
+
+      var menuname = a.attr('menuname');
+      if (menuname =="home")
+      {
+          jQuery('#info').html('');
+      }
+      else if (menuname == "about")
+      {
+        jQuery('#info').html('<div class="alert alert-info" data-dismiss="alert">This project started as I have spent countless hours researching home mixer appliances</div>');
+
+      }
+      else if (menuname == "contact")
+      {
+        jQuery('#info').html('<div class="alert alert-info" data-dismiss="alert"> <a href="mailto:hbriceno@alum.mit.edu">email me</a></div>');
+
+      }
+
+    }
+    jQuery('#info').addClass('alert');
+    e.preventDefault();
+  });
+});
+
+</script>
+
   </head>
   <body>
 
@@ -114,30 +177,34 @@
                 <a class="brand" href="#">Bitstarter</a>
                 <div class="nav-collapse collapse">
                     <ul class="nav">
-                        <li class="active"><a href="#">Home</a></li>
-                        <li><a href="#about">About</a></li>
-                        <li><a href="#contact">Contact</a></li>
+                        <li class="active" menuname="home"><a href="#">Home</a></li>
+                        <li><a href="#about" menuname="about">About</a></li>
+                        <li><a href="#contact" menuname="contact">Contact</a></li>
                     </ul>
                 </div> <!-- /.nav-collapse -->
             </div>
         </div>
      </div>
 
+<div id="info">
+</div>
 
     <div class="container">
       <div class="row-fluid heading">
     	 <div class="span12">
-	       <h1>Product</h1>
+	       <h1>The Ultimate Home Cooking System</h1>
       	</div>
       </div>
       <div class="row-fluid subheading">
       	<div class="span12">
-	       <p class="lead">One sentence description.</p>
+	       <p class="lead">Smart Phone Controlled (Induction Cooktop + Pot Top Mixer) = Super Easy Gourmet Cooking</p>
+         <!-- http://www.freepatentsonline.com/6264358.html -->
 	     </div>
       </div>
       <div class="row-fluid pitch">
       	<div class="span5 offset1 video">
-      	  <img class="img-polaroid" src="http://placehold.it/480x300"> 
+      	  <!-- <img class="img-polaroid" src="http://placehold.it/480x300"> -->
+          <img class="img-polaroid" src="http://images.zesco.com/pimages/597/597-support3.jpg"></img> + <img class="img-polaroid" src="http://www.dropyourenergybill.com/wp-content/uploads/2010/04/cooking-induction4.jpg" width="120" height="120"></img>
       	</div>
 
         <!-- action contains stats order and share -->
@@ -152,12 +219,12 @@
               </div>
               <div class="span4">
                 <div class="linediv-c">
-                  <h3>$6000</h3><p>of $10,000</p>
+                  <h3>$500</h3><p>each</p>
                 </div>
               </div>
               <div class="span4">
                 <div class="linediv-r">
-                  <h3>10</h3><p> days left</p>
+                  <h3>30</h3><p> days left</p>
                 </div>
               </div>
             </div>
@@ -181,16 +248,16 @@
     </div>
     <div class="row-fluid section1">
       <div class="span5 offset1 asset">
-        <img class="img-polaroid" src="http://placehold.it/480x300">
+        + <img class="img-polaroid" src="http://i.i.cbsi.com/cnwk.1d/i/tim/2012/09/17/06_archimedes_35438535_620x433.jpg" width="50%" height="50%"> = 
+        <img class="img-polaroid" src="http://dietpill-reviews.co.uk/wp-content/uploads/2013/06/healthy-gourmet-food.jpg" width="50%" height="50%"> 
+        
+
       </div>
 
       <div class="span5 copy">
         <p>
-          blasasdf saldfj saldjf asdljfdlsajf lsadj lfjd slfj dsalkjf lsdaj fsda
-          sda lfjdsalf jsdalkjf lsadkj fldksaj fldaksj flkasdjf
-          asd fladskj flaksdj fasd fasdf asd
-          fds lfkj sdlkjasfdlkjdsalkjf a;dsljf ;adksjf l;kasdjf;lkadjsf;klajsdf
-          asdf asdlf;lasj df;laksjd fl;ksdaj fjsdl;f j
+          Appliances like high end <a href="http://www.amazon.com/Kitchenaid-Commercial-Capacity-Includes-Beater/dp/B001PHMRIA/ref=sr_1_23?s=kitchen&ie=UTF8&qid=1374531754&sr=1-23">Kichen Aid Mixers sell for $1000</a>.
+          By combining a phone controlled induction cooktop and a phone controlled mixer that attaches to a 5qt and 8qt pot, you can prepare delicious recepices as easily as downloading a file.
         </p>
       </div>
     </div>
@@ -199,15 +266,37 @@
     <div class="row-fluid section2">
       <div class="span5 offset1 copy copy-right">
         <p>
-          blasasdf saldfj saldjf asdljfdlsajf lsadj lfjd slfj dsalkjf lsdaj fsda
-          sda lfjdsalf jsdalkjf lsadkj fldksaj fldaksj flkasdjf
-          asd fladskj flaksdj fasd fasdf asd
-          fds lfkj sdlkjasfdlkjdsalkjf a;dsljf ;adksjf l;kasdjf;lkadjsf;klajsdf
-          asdf asdlf;lasj df;laksjd fl;ksdaj fjsdl;f j
+          The De'Longhi's Group has a revenue of <a href="http://en.wikipedia.org/wiki/De%27Longhi">1.6B</a>, they make mainly cooking appliances, including kenwood.  With other manufactures this market is at least 1B.
       </p>
+        <p>
+          With 50K, we can develop our first prototype made of three pieces:
+          <ol>
+            <li>Stove Top Mixer</li>
+            <li>Software controlled for Induction cooktop</li>
+            <li>Smart Phone Software and few recipes</li>
+          </ol>
+        </p>
       </div>
       <div class="span5 asset">
-        <img class="img-polaroid" src="http://placehold.it/480x300">
+
+
+        <!-- wrapper div -->  
+        <div class='wrapper'>  
+          <!-- image -->  
+          <img class="img-polaroid" src="http://ecx.images-amazon.com/images/I/31C7cn9KEoL._SX355_.jpg">
+          <!-- description div -->  
+          <div class='description'>  
+            <!-- description content -->  
+            <p class='description_content'>
+
+              <img src="http://www.clker.com/cliparts/0/7/e/a/12074327311562940906milker_X_icon.svg.med.png"></img>
+</p>  
+            <!-- end description content -->  
+          </div>  
+          <!-- end description div -->  
+        </div>  
+    <!-- end wrapper div -->
+
       </div>
     </div>
 
@@ -218,12 +307,12 @@
         <div class="accordion" id="accordion2">
           <div class="accordion-group">
             <div class="accordion-heading">
-              <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseOne">What does FAQ stand for?
+              <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseOne">Will my mixer work without a smart phone?
               </a>
             </div>
             <div id="collapseOne" class="accordion-body collapse">
                 <div class="accordion-inner">
-                    Frequently Asked Question.
+                    Of course!, you can use your mixer in manual mode;  the smart phone is only needed when you want to download a recipe and executed with minimal or now intervention.
                 </div>
             </div>
           </div>
